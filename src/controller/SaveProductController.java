@@ -14,6 +14,9 @@ public class SaveProductController implements Controller {
     @Override
     public String handleRequest(HttpServletRequest request,
             HttpServletResponse response) {
+        /**
+         * I have been changed, too.
+         */
         ProductForm productForm = new ProductForm();
         // populate action properties
         productForm.setName(request.getParameter("name"));
