@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Spring integration" type="spring-integration">
+    <CLASSES>
+      <root url="jar://E:/fgn/spring-framework/spring-framework-3.2.8.RELEASE-dist.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
