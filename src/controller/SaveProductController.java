@@ -1,22 +1,26 @@
 package controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import domain.Product;
 import form.ProductForm;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
 import validator.ProductValidator;
 
 public class SaveProductController implements Controller {
-
+    private static final Log logger = LogFactory.getLog(SaveProductController.class);
     @Override
-    public String handleRequest(HttpServletRequest request,
-            HttpServletResponse response) {
-        /**
-         * I have been changed, too.
-         */
+    public ModelAndView handleRequest(HttpServletRequest request,
+            HttpServletResponse response)  {
+
         ProductForm productForm = new ProductForm();
         // populate action properties
         productForm.setName(request.getParameter("name"));
@@ -33,17 +37,14 @@ public class SaveProductController implements Controller {
             product.setDescription(productForm.getDescription());
             product.setPrice(Float.parseFloat(productForm.getPrice()));
 
-            // no validation error, execute action method
-            // insert code to save product to the database
-
-            // store product in a scope variable for the view
             request.setAttribute("product", product);
-            return "/jsp/ProductDetails.jsp";
+            return new ModelAndView("/ProductDetails","product",product);
         } else {
             // store errors and form in a scope variable for the view
-            request.setAttribute("errors", errors);
-            request.setAttribute("form", productForm);
-            return "/jsp/ProductForm.jsp";
+            Map<String,Object> map = new HashMap<String, Object>();
+            map.put("errors",errors);
+            map.put("form",productForm);
+            return new ModelAndView("/ProductForm",map);
         }
     }
 
