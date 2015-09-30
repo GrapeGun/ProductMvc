@@ -1,10 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-<title>Add Product Form</title>
-  <style type="text/css">@import url(css/main.css);</style>
-
+    <meta charset="UTF-8"/>
+    <title>Add Product Form</title>
+    <%--<style type="text/css">@import url(css/main.css);</style>--%>
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         </ul>
         </p>
 </c:if>
-<form action="product_save.action" method="post">
+<form action="product_save" method="post">
     <fieldset>
         <legend>Add a product</legend>
             <p>
