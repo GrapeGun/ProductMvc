@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>SaveProduct</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <%--<link rel="stylesheet" href="css/main.css" />--%>
+    <style type="text/css">@import url(css/main.css);</style>
 </head>
 <body>
 <div id="global">

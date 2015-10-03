@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Add Product Form</title>
-    <%--<style type="text/css">@import url(css/main.css);</style>--%>
-    <link href="css/main.css" rel="stylesheet" />
+    <style type="text/css">@import url(css/main.css);</style>
+    <%--<link href="css/main.css" rel="stylesheet" />--%>
 </head>
 <body>
 

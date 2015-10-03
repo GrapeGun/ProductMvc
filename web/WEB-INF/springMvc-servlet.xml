@@ -14,6 +14,7 @@
        <!--<bean name="/product_input.action" class="controller.InputProductController"/>-->
        <!--<bean name="/product_save.action" class="controller.SaveProductController"/>-->
        <context:component-scan base-package="controller"/>
+       <context:component-scan base-package="service"/>
        <mvc:annotation-driven/>
        <mvc:resources mapping="/css/**" location="/css/"/>
        <mvc:resources mapping="/*.html" location="/"/>
